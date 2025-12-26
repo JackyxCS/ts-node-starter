@@ -1,0 +1,59 @@
+{
+  // Compiler configuration for a modern Node (ESM) project
+  "compilerOptions": {
+    // JavaScript version to emit (keeps syntax/features up to ES2022)
+    "target": "ES2022",
+
+    // Use Node's native ESM semantics (import/export) and resolution
+    "module": "NodeNext",
+
+    // Match Node's resolution algorithm for ESM/CJS interop
+    "moduleResolution": "NodeNext",
+
+    // Source code lives under src; used for pathing and diagnostics
+    "rootDir": "src",
+
+    // Transpiled output goes to dist; keep build artifacts separate
+    "outDir": "dist",
+
+    // Standard library types to include during compilation
+    "lib": ["ES2022"],
+
+    // Enable strict type checking across the project
+    "strict": true,
+
+    // Smooth interop when importing CommonJS modules with default export shapes
+    "esModuleInterop": true,
+
+    // Allow importing JSON files and get typed shapes
+    "resolveJsonModule": true,
+
+    // Speed up builds by skipping type checks of node_modules
+    "skipLibCheck": true,
+
+    // Prevent case-mismatch issues across platforms
+    "forceConsistentCasingInFileNames": true,
+
+    // Check each file in isolation; helpful with ESM and bundlers
+    "isolatedModules": true,
+
+    // Require explicit override keyword when overriding class members
+    "noImplicitOverride": true,
+
+    // Catch unsafe property access via index signatures
+    "noPropertyAccessFromIndexSignature": true,
+
+    // Treat optional properties precisely in type relationships
+    "exactOptionalPropertyTypes": true,
+
+    // Reuse prior build info to speed up subsequent compilations
+    "incremental": true,
+
+    // Emit source maps for better debugging in Node and dev tools
+    "sourceMap": true
+  },
+
+  // Only compile sources; exclude build and dependencies
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
